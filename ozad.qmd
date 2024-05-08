@@ -1,25 +1,262 @@
 ---
-title: "OZAD"
-format: revealjs
+title: "Цифровые методы для работы с античными и средневековыми текстами"
+author: Ольга Алиева
+execute:
+  echo: true
+date: 27 05 2024
+format: 
+  revealjs:
+    theme: style.scss
+    incremental: true
+    scrollable: true
 ---
 
-## Quarto
+# Подготовка
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+## В каком виде текст?
 
-## Bullets
+1. Рукопись -> ΗΤR
+2. Печатная книга -> OCR
+3. Распознанный текст -> разметка
+4. XML -> парсинг
 
-When you click the **Render** button a document will be generated that includes:
+## HTR 
 
--   Content authored with markdown
--   Output from executable code
+- [Transkribus](https://www.transkribus.org/) (NB: нельзя экспортировать модели);
 
-## Code
+- [Kraken](https://kraken.re/2.0.0/index.html), запускается из командной строки / программной среды;
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+- [eScriptorium](https://escriptorium.inria.fr/) -- графический интерфейс для Kraken (NB: требует установки на сервер).
+
+- Подробнее: [доклад С.Яцык](https://vk.com/video-211800158_456239315)
+
+## OCR 
+:::: {.columns}
+
+::: {.column width="40%"}
+![](images/latin.png)
+:::
+
+::: {.column width="60%"}
+```{r}
+#| cache: true
+
+# tesseract_download("lat")
+lang <- tesseract::tesseract("lat+grc")
+text <- tesseract::ocr("./images/latin.png", engine = lang)
+cat(text)
+```
+:::
+
+::::
+  
+## Сравнение и разметка 
+
+- инструменты: <http://www.ecomparatio.net/>, <https://collatex.net/>, <https://stemmaweb.net/>, Juxta и др.
+- возможности: разметка и создание критического аппарата, построение стеммы (филогенетические методы), реконструкция архетипа и др., но ни один из этих этапов не автоматизирован полностью;
+- [узкие места](https://jdmdh.episciences.org/10365/pdf): значимые ошибки (Leitfehler), "орфографический шум" (ae / e), контаминация.
+
+---
+
+![https://stemmaweb.net/stemmaweb/](images/stemma.png)
+
+## XML
+
+- большая часть размеченных литературных корпусов хранится  в формате XML, причем теги определяют структуру и смысл данных;
+- это позволяет доставать из документа именно то, что нам интересно: определенную главу, речи конкретных персонажей, слова на иностранных языках и т.п.
+- добавлять и удалять разметку может любой пользователь в редакторе XML кода или даже в простом текстовом редакторе. 
+
+## TEI 
+
+- в качестве универсального языка разметки в гуманитарных дисциплинах используется язык TEI ([Скоринкин 2016](https://cyberleninka.ru/article/n/elektronnoe-predstavlenie-teksta-s-pomoschyu-standarta-razmetki-tei/viewer)). 
+- Пример оформления документа можно посмотреть по [ссылке](https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg010/tlg0059.tlg010.perseus-grc2.xml).
+
+# Репозитории 
+
+---
+
+[Perseus: Canonical-greekLit](https://github.com/PerseusDL/canonical-greekLit) и [Perseus: Canonical-latinLit](https://github.com/PerseusDL/canonical-latinLit). Два репозитория на GitHub с важнейшими классическими текстами на греческом и латинском языке, для многих также есть английские переводы. Более или менее это соответствует той части TLG / PHI, которая доступна без подписки. Сами тексты в репозиториях находятся в папке data под числовыми кодами, значение которых надо смотреть в [Perseus Catalogue](https://catalog.perseus.org). 
+
+--- 
+
+[Diorisis Ancient Greek corpus](https://figshare.com/articles/dataset/The_Diorisis_Ancient_Greek_Corpus/6187256). Датасет доступен на Figshare. Это аннотированный корпус, т.е. для всех слов там есть лемма (начальная форма) и морфологическое описание, достаточно точное. В основе лежат данные из Perseus Canonical Greek Lit, цифровой библиотеки “[The Little Sailing](http://www.mikrosapoplous.gr/en/texts1en.html)”, а также [Bibliotheca Augustana](https://www.hs-augsburg.de/~harsch/augustana.html). У корпуса есть особенность: лемма хранится в юникоде, а словоформа — в бетакоде (что легко исправить). Из достоинств, по сравнению с Perseus, единообразное оформление xml для всех текстов. Это значит, с одной стороны, что важная для некоторых жанров информация (например, о конце стиха у Гомера) может быть недоступна. С другой стороны — любое количество текстов достаются одним циклом. Всего корпус содержит 820 текстов от Гомера до V в. н.э. и более 10 млн слов.  
+
+---
+
+![what Diorisis keeps](images/diorisis.jpg)
+
+--- 
+
+[Open Greek and Latin Project](https://github.com/OpenGreekAndLatin). Это целое семейство репозиториев с текстами, которые не попали в Perseus. Поэтому здесь вы не найдете, например, Фукидида или Новый Завет. Но зато [First1KGreek Project](https://opengreekandlatin.github.io/First1KGreek/) содержит сочинения многих Отцов Церкви, Филона Александрийского, Галена и других — всего 25,5 млн слов. Латинские Отцы хранятся в [Corpus Scriptorum Ecclesiasticorum Latinorum](http://opengreekandlatin.github.io/csel-dev/) (CSEL), у которого тоже свой репозиторий на GitHub. 
+
+--- 
+
+[Corpus Corporum](https://mlat.uzh.ch/browser?path=/index.php): repositorium operum latinorum apud universitatem Turicensem. Потрясающий по масштабам метарепозиторий, в котором найдутся латинские тексты от античности до Neolatinitas (каталог), включая некоторые латинские диссертации XIX в. Можно читать онлайн или скачивать xml. 
+
+# Синтаксический и морфологический анализ
+
+---
+
+- существующие корпуса морфо-синтаксических деревьев (treebanks) для древнегреческого, латинского и др. языков можно использовать для разметки новых текстов <https://universaldependencies.org/>
+
+- Древнегреческий: <https://universaldependencies.org/treebanks/grc-comparison.html> 
+
+- Латынь: <https://universaldependencies.org/treebanks/la-comparison.html>
+
+## Как использовать
+
+- исследовательские и педагогические задачи: какие глаголы чаще ассоциируются с предметами мужского рода, чем женского; насколько сложными являются предложения у данных авторов/жанров по сравнению с другими и т.д.
+
+- подготовка корпуса для анализа: тематическое моделирование, векторизация и др. 
+
+## Трибанки онлайн 
+
+- <https://clarino.uib.no/iness/page> ([видео](https://www.youtube.com/watch?v=Btk5UX-fsOY))
+
+- <https://www.perseids.org/>
+
+- Подробнее: <https://wiki.digitalclassicist.org/Treebanking> 
+
+---
 
 ```{r}
-1 + 1
+#| cache: true
+#| message: false
+library(udpipe)
+library(dplyr)
+model_grc <- udpipe_load_model("ancient_greek-perseus-ud-2.5-191206.udpipe")
+hex <- "Πρέπουσα ἀρχὴ τῷ περὶ τῆς τοῦ κόσμου συστάσεως μέλλοντι διηγεῖσθαι, ἀρχὴν τῆς τῶν ὁρωμένων διακοσμήσεως προθεῖναι τοῦ λόγου."
+
+udpipe_annotate(model_grc, hex) |> 
+  as_tibble() |> 
+  select(token_id, token, lemma, upos, xpos)
+```
+
+## XML парсинг
+
+- если вам повезло, и ваши источники хранятся в виде xml, то понадобятся инструменты для их парсинга / редактуры
+- например, достанем что-нибудь из "[Исповеди](https://raw.githubusercontent.com/OpenGreekAndLatin/csel-dev/master/data/stoa0040/stoa001/stoa0040.stoa001.opp-lat1.xml)" Августина
+
+. . . 
+
+> Magnus es, domine, et laudabilis valde: magna virtus tua, et sapientiae tuae non est numerus.
+
+
+---
+
+```{r}
+#| cache: true
+
+library(xml2)
+library(stringr)
+
+url <- "https://raw.githubusercontent.com/OpenGreekAndLatin/csel-dev/master/data/stoa0040/stoa001/stoa0040.stoa001.opp-lat1.xml"
+doc <- read_xml(url)
+ps_count <- doc |> 
+  xml_find_all("//d1:note", ns = xml_ns(doc)) |> 
+  xml_text() |> 
+  str_extract_all("Ps. \\d{1,3}") |> 
+  unlist() |> 
+  table() 
+
+ps_count
+```
+
+--- 
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+tibble(counts = as.integer(ps_count), 
+       psalm = names(ps_count)) |> 
+  slice_max(order_by = counts, n = 10) |> 
+  ggplot(aes(psalm, counts, fill = psalm)) +
+    geom_col(show.legend = F) +
+    theme(axis.text.x = element_text(angle = 45))
 ```
 
 
+# Анализ
+
+## Тематическое моделирование
+
+- Тематическое моделирование — семейство методов обработки больших коллекций текстовых документов. Эти методы позволяют определить, к каким темам относится каждый документ и какие слова образуют каждую тему.
+
+- Одним из таких методов является латентное размещение Дирихле (Latent Dirichlet Allocation, LDA). Так называется вероятностная модель, которая позволяет выявить заданное количество тем в корпусе текстов. В основе метода лежит предположение, что каждый документ представляет собой комбинацию ограниченного числа топиков (тем), а каждый топик — это распределение вероятностей для слов. 
+
+- подробнее см. [ссылку](https://iq.hse.ru/news/885865882.html) и [пример](https://sysblok.ru/metascience/tancy-jeros-i-zachatie-o-chem-pisali-platonovskie-issledovanija-za-poslednie-10-let/) моделирования журнала "Платоновские исследования"
+
+---
+
+![Основные принципы алгоритма латентного размещения Дирихле](https://iq.hse.ru/mirror/pubs/share/885917361)
+
+## Стилометрия
+
+- не только [определения авторства](https://sysblok.ru/knowhow/stilometrija-kak-v-raznoe-vremja-ljudi-iskali-avtorov-tekstov/);
+- семейство методов (с учителем и без учителя, в том числе ГО)
+- подробнее см. мое видео от 18.05.2024
+
+
+---
+
+Пример: старофранцузская аллегорическая поэма 13 в. «Роман о Розе» была написана разными авторами в разное время. Из примерно 22 тыс. стихов поэмы первые 4 тыс., как считается, написаны около 1230 г. Гийомом де Лоррисом. Остальные добавлены около 1275 г. Жаном де Мёном. 
+
+![Sections attributed to Guillaume de Lorris are marked red, those attributed to Jean de Meun are green. ](https://computationalstylistics.github.io/assets/img/rolling-svm_100-features_5000-per-slice.png)
+
+## Анализ эмоциональной тональности
+
+- Анализ тональности текста (англ. Sentiment analysis) — задача компьютерной лингвистики, заключающаяся в определении эмоциональной окраски (тональности) текста и, в частности, в выявлении эмоциональной оценки авторов по отношению к объектам, описываемым в тексте.
+
+- В целом, задача анализа тональности текста эквивалентна задаче классификации текста, где категориями текстов могут быть тональные оценки (позитивная, негативная или нейтральная).
+
+--- 
+
+Некоторые подходы:
+
+- подходы, основанные на правилах;
+- подходы, основанные на словарях ([для латыни](https://github.com/CIRCSE/Latin_Sentiment_Lexicons/tree/master); для греческого нет);
+- машинное обучение с учителем;
+- машинное обучение без учителя.
+
+
+- Подробнее см.: [Odi et amo](https://aclanthology.org/2020.lrec-1.376.pdf)
+- Пример анализа настроений в письмах Цицерона (обучающее [видео](https://vk.com/video-211800158_456239295))
+
+## Визуализация и картографирование
+
+Несколько интересных решений:
+
+- Газетир (географический справочник) для любителей античности: https://pleiades.stoa.org/
+- [Recogito](https://recogito.pelagios.org/document/mmmltukvwenhto/map) — это бесплатный, очень простой, но достаточно удобный онлайн-инструмент, в 2018 получивший приз как лучший DH-tool в Digital Humanities Awards 2018. Он позволяет работать в командах над аннотированием текстов. 
+- В 2014 г. группа DH-сколаров создала [карту](https://ships.lib.virginia.edu/neatline/show/iliad-book-2) по мотивам знаменитого «каталога кораблей» из второй песни «Илиады».
+- карта с виллами Цицерона: <http://antibarbari.ru/2023/03/01/cicero_villas/>
+
+
+## Сетевой анализ
+
+- просопография (проект "[Социальная сеть Сократа](https://research-bulletin.chs.harvard.edu/2019/02/21/social-network-of-socrates/#_ednref1)")
+- персонажи в драматических произведениях (видео)
+- переписка 
+- термины: наиболее частотные существительные из “Исповеди” в виде интерактивного облака ([игрушечный пример](https://locusclassicus.github.io/confessiones/))
+
+## Семантический анализ
+
+
+
+## Где узнать больше
+
+- "Системный Блокъ" <https://sysblok.ru/>
+- Vox medii aevi <https://t.me/voxmediiaevi>
+- RAntiquity <https://t.me/rantiquity> и YouTube-канал [LocusClassicus](https://www.youtube.com/channel/UCnmQu_61MAJ7zjyNqoSQTXQ) 
+- Магистратура "Цифровые методы в гуманитарных науках" <https://www.hse.ru/ma/dh/>
+- Сайт курса "Количественные методы в гуманитарных науках: критическое введение" <http://criticaldh.ru/>
+- Борис Орехов <https://nevmenandr.github.io/> 
+
+
+
+  
+  
+
+
+- 
