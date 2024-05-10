@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="ozad_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ozad_files/libs/quarto-html/tabby.min.js"></script>
-<script src="ozad_files/libs/quarto-html/popper.min.js"></script>
-<script src="ozad_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="ozad_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ozad_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="ozad_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="ozad_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Ольга Алиева">
@@ -16,8 +16,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="ozad_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="ozad_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,11 +96,11 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="ozad_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="ozad_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="ozad_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="ozad_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="ozad_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -406,14 +406,14 @@
   <p class="date">2024-05-27</p>
 </section>
 <section>
-<section id="подготовка" class="title-slide slide level1 center">
-<h1>Подготовка</h1>
+<section id="сбор-данных" class="title-slide slide level1 center">
+<h1>Сбор данных</h1>
 
 </section>
 <section id="в-каком-виде-текст" class="slide level2 scrollable">
 <h2>В каком виде текст?</h2>
 <ol type="1">
-<li class="fragment">Рукопись -&gt; ΗΤR</li>
+<li class="fragment">Изображение рукописи / папируса -&gt; ΗΤR</li>
 <li class="fragment">Печатная книга -&gt; OCR</li>
 <li class="fragment">Распознанный текст -&gt; разметка</li>
 <li class="fragment">XML -&gt; парсинг</li>
@@ -486,61 +486,57 @@ dicio discernerent.</code></pre>
 <section id="tei" class="slide level2">
 <h2>TEI</h2>
 <ul>
-<li class="fragment">в качестве универсального языка разметки в гуманитарных дисциплинах используется язык TEI (<a href="https://cyberleninka.ru/article/n/elektronnoe-predstavlenie-teksta-s-pomoschyu-standarta-razmetki-tei/viewer">Скоринкин 2016</a>).</li>
-<li class="fragment">Пример оформления документа можно посмотреть по <a href="https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0059/tlg010/tlg0059.tlg010.perseus-grc2.xml">ссылке</a>.</li>
+<li class="fragment">в качестве универсального языка разметки в гуманитарных дисциплинах используется язык <a href="https://tei-c.org/">TEI</a> (<a href="https://cyberleninka.ru/article/n/elektronnoe-predstavlenie-teksta-s-pomoschyu-standarta-razmetki-tei/viewer">Скоринкин 2016</a>).</li>
+<li class="fragment">Пример оформления документа можно посмотреть по <a href="https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0555/tlg006/tlg0555.tlg006.perseus-grc2.xml">ссылке</a>.</li>
 </ul>
-</section></section>
-<section>
-<section id="репозитории" class="title-slide slide level1 center">
-<h1>Репозитории</h1>
-
 </section>
-<section class="slide level2">
-
-<p><a href="https://github.com/PerseusDL/canonical-greekLit">Perseus: Canonical-greekLit</a> и <a href="https://github.com/PerseusDL/canonical-latinLit">Perseus: Canonical-latinLit</a>. Два репозитория на GitHub с важнейшими классическими текстами на греческом и латинском языке, для многих также есть английские переводы. Более или менее это соответствует той части TLG / PHI, которая доступна без подписки. Сами тексты в репозиториях находятся в папке data под числовыми кодами, значение которых надо смотреть в <a href="https://catalog.perseus.org">Perseus Catalogue</a>.</p>
+<section id="репозитории" class="slide level2 scrollable">
+<h2>Репозитории</h2>
+<ol type="1">
+<li class="fragment"><a href="https://github.com/PerseusDL/canonical-greekLit">Perseus: Canonical-greekLit</a> и <a href="https://github.com/PerseusDL/canonical-latinLit">Perseus: Canonical-latinLit</a>. Два репозитория на GitHub с важнейшими классическими текстами на греческом и латинском языке, для многих также есть английские переводы. Более или менее это соответствует той части TLG / PHI, которая доступна без подписки. Сами тексты в репозиториях находятся в папке data под числовыми кодами, значение которых надо смотреть в <a href="https://catalog.perseus.org">Perseus Catalogue</a>.</li>
+</ol>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 
-<p><a href="https://figshare.com/articles/dataset/The_Diorisis_Ancient_Greek_Corpus/6187256">Diorisis Ancient Greek corpus</a>. Датасет доступен на Figshare. Это аннотированный корпус, т.е. для всех слов там есть лемма (начальная форма) и морфологическое описание, достаточно точное. В основе лежат данные из Perseus Canonical Greek Lit, цифровой библиотеки “<a href="http://www.mikrosapoplous.gr/en/texts1en.html">The Little Sailing</a>”, а также <a href="https://www.hs-augsburg.de/~harsch/augustana.html">Bibliotheca Augustana</a>. У корпуса есть особенность: лемма хранится в юникоде, а словоформа — в бетакоде (что легко исправить). Из достоинств, по сравнению с Perseus, единообразное оформление xml для всех текстов. Это значит, с одной стороны, что важная для некоторых жанров информация (например, о конце стиха у Гомера) может быть недоступна. С другой стороны — любое количество текстов достаются одним циклом. Всего корпус содержит 820 текстов от Гомера до V в. н.э. и более 10 млн слов.</p>
+<ol start="2" type="1">
+<li class="fragment"><a href="https://figshare.com/articles/dataset/The_Diorisis_Ancient_Greek_Corpus/6187256">Diorisis Ancient Greek corpus</a>. Датасет доступен на Figshare. Это аннотированный корпус, т.е. для всех слов там есть лемма (начальная форма) и морфологическое описание, достаточно точное. В основе лежат данные из Perseus Canonical Greek Lit, цифровой библиотеки “<a href="http://www.mikrosapoplous.gr/en/texts1en.html">The Little Sailing</a>”, а также <a href="https://www.hs-augsburg.de/~harsch/augustana.html">Bibliotheca Augustana</a>. У корпуса есть особенность: лемма хранится в юникоде, а словоформа — в бетакоде (что легко исправить). Из достоинств, по сравнению с Perseus, единообразное оформление xml для всех текстов. Это значит, с одной стороны, что важная для некоторых жанров информация (например, о конце стиха у Гомера) может быть недоступна. С другой стороны — любое количество текстов достаются одним циклом. Всего корпус содержит 820 текстов от Гомера до V в. н.э. и более 10 млн слов.</li>
+</ol>
 </section>
 <section class="slide level2">
 
 
 <img data-src="images/diorisis.jpg" class="r-stretch quarto-figure-center"><p class="caption">what Diorisis keeps</p></section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 
-<p><a href="https://github.com/OpenGreekAndLatin">Open Greek and Latin Project</a>. Это целое семейство репозиториев с текстами, которые не попали в Perseus. Поэтому здесь вы не найдете, например, Фукидида или Новый Завет. Но зато <a href="https://opengreekandlatin.github.io/First1KGreek/">First1KGreek Project</a> содержит сочинения многих Отцов Церкви, Филона Александрийского, Галена и других — всего 25,5 млн слов. Латинские Отцы хранятся в <a href="http://opengreekandlatin.github.io/csel-dev/">Corpus Scriptorum Ecclesiasticorum Latinorum</a> (CSEL), у которого тоже свой репозиторий на GitHub.</p>
+<ol start="3" type="1">
+<li class="fragment"><a href="https://github.com/OpenGreekAndLatin">Open Greek and Latin Project</a>. Это целое семейство репозиториев с текстами, которые не попали в Perseus. Поэтому здесь вы не найдете, например, Фукидида или Новый Завет. Но зато <a href="https://opengreekandlatin.github.io/First1KGreek/">First1KGreek Project</a> содержит сочинения многих Отцов Церкви, Филона Александрийского, Галена и других — всего 25,5 млн слов. Латинские Отцы хранятся в <a href="http://opengreekandlatin.github.io/csel-dev/">Corpus Scriptorum Ecclesiasticorum Latinorum</a> (CSEL), у которого тоже свой репозиторий на GitHub.</li>
+</ol>
 </section>
-<section class="slide level2">
+<section class="slide level2 scrollable">
 
-<p><a href="https://mlat.uzh.ch/browser?path=/index.php">Corpus Corporum</a>: repositorium operum latinorum apud universitatem Turicensem. Потрясающий по масштабам метарепозиторий, в котором найдутся латинские тексты от античности до Neolatinitas (каталог), включая некоторые латинские диссертации XIX в. Можно читать онлайн или скачивать xml.</p>
+<ol start="4" type="1">
+<li class="fragment"><p><a href="https://mlat.uzh.ch/browser?path=/index.php">Corpus Corporum</a>: repositorium operum latinorum apud universitatem Turicensem. Потрясающий по масштабам метарепозиторий, в котором найдутся латинские тексты от античности до Neolatinitas (каталог), включая некоторые латинские диссертации XIX в. Можно читать онлайн или скачивать xml.</p></li>
+<li class="fragment"><p><a href="https://github.com/papyri/idp.data">Papyri.info IDP</a> (Integrating Digital Papyrology) Data: литературные и документальные папирусы, метаданные и библиография.</p></li>
+</ol>
 </section></section>
 <section>
-<section id="синтаксический-и-морфологический-анализ" class="title-slide slide level1 center">
-<h1>Синтаксический и морфологический анализ</h1>
+<section id="предобработка" class="title-slide slide level1 center">
+<h1>Предобработка</h1>
 
 </section>
-<section class="slide level2">
-
+<section id="синтаксический-и-морфологический-анализ" class="slide level2">
+<h2>Синтаксический и морфологический анализ</h2>
 <ul>
-<li class="fragment"><p>существующие корпуса морфо-синтаксических деревьев (treebanks) для древнегреческого, латинского и др. языков можно использовать для разметки новых текстов <a href="https://universaldependencies.org/" class="uri">https://universaldependencies.org/</a></p></li>
-<li class="fragment"><p>Древнегреческий: <a href="https://universaldependencies.org/treebanks/grc-comparison.html" class="uri">https://universaldependencies.org/treebanks/grc-comparison.html</a></p></li>
-<li class="fragment"><p>Латынь: <a href="https://universaldependencies.org/treebanks/la-comparison.html" class="uri">https://universaldependencies.org/treebanks/la-comparison.html</a></p></li>
+<li class="fragment"><p>примеры вопросов: какие глаголы чаще ассоциируются с предметами мужского рода, чем женского; насколько сложными являются предложения у данных авторов/жанров по сравнению с другими и т.д.</p></li>
+<li class="fragment"><p>подготовка корпуса для анализа: тематическое моделирование, векторизация, эмоциональная тональность и др.</p></li>
 </ul>
 </section>
-<section id="как-использовать" class="slide level2">
-<h2>Как использовать</h2>
+<section id="treebanks" class="slide level2">
+<h2>Treebanks</h2>
 <ul>
-<li class="fragment"><p>исследовательские и педагогические задачи: какие глаголы чаще ассоциируются с предметами мужского рода, чем женского; насколько сложными являются предложения у данных авторов/жанров по сравнению с другими и т.д.</p></li>
-<li class="fragment"><p>подготовка корпуса для анализа: тематическое моделирование, векторизация и др.</p></li>
-</ul>
-</section>
-<section id="трибанки-онлайн" class="slide level2">
-<h2>Трибанки онлайн</h2>
-<ul>
-<li class="fragment"><p><a href="https://clarino.uib.no/iness/page" class="uri">https://clarino.uib.no/iness/page</a> (<a href="https://www.youtube.com/watch?v=Btk5UX-fsOY">видео</a>)</p></li>
-<li class="fragment"><p><a href="https://www.perseids.org/" class="uri">https://www.perseids.org/</a></p></li>
-<li class="fragment"><p>Подробнее: <a href="https://wiki.digitalclassicist.org/Treebanking" class="uri">https://wiki.digitalclassicist.org/Treebanking</a></p></li>
+<li class="fragment"><p>существующие корпуса морфо-синтаксических деревьев (treebanks) для древнегреческого, латинского и др. языков можно использовать для разметки новых текстов: <a href="https://universaldependencies.org/" class="uri">https://universaldependencies.org/</a></p></li>
+<li class="fragment"><p><a href="https://universaldependencies.org/treebanks/grc-comparison.html">древнегреческий</a> и <a href="https://universaldependencies.org/treebanks/la-comparison.html">латынь</a></p></li>
+<li class="fragment"><p>Онлайн: <a href="https://clarino.uib.no/iness/page" class="uri">https://clarino.uib.no/iness/page</a> (<a href="https://www.youtube.com/watch?v=Btk5UX-fsOY">видео</a>) и <a href="https://www.perseids.org/" class="uri">https://www.perseids.org/</a></p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -606,33 +602,14 @@ dicio discernerent.</code></pre>
 <span id="cb5-8"><a href=""></a>  <span class="fu">xml_text</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb5-9"><a href=""></a>  <span class="fu">str_extract_all</span>(<span class="st">"Ps. </span><span class="sc">\\</span><span class="st">d{1,3}"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb5-10"><a href=""></a>  <span class="fu">unlist</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-11"><a href=""></a>  <span class="fu">table</span>() </span>
-<span id="cb5-12"><a href=""></a></span>
-<span id="cb5-13"><a href=""></a>ps_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-11"><a href=""></a>  <span class="fu">table</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-12"><a href=""></a>  <span class="fu">sort</span>(<span class="at">decreasing =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-13"><a href=""></a></span>
+<span id="cb5-14"><a href=""></a><span class="fu">head</span>(ps_count, <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
- Ps. 10 Ps. 100 Ps. 101 Ps. 102 Ps. 103 Ps. 105 Ps. 106 Ps. 108 Ps. 111 Ps. 112 
-      1       1       6       5       3       2       1       1       1       2 
-Ps. 113 Ps. 115 Ps. 117 Ps. 118 Ps. 119 Ps. 120 Ps. 121 Ps. 124 Ps. 127 Ps. 128 
-      5       8       2      11       3       1       1       1       1       1 
-Ps. 129 Ps. 135 Ps. 138 Ps. 140 Ps. 141 Ps. 142 Ps. 143 Ps. 144 Ps. 146 Ps. 148 
-      2       1       7       2       1       3       2       3       2       7 
-Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22 
-      1       2       3       9      12       1       1       3       5       1 
- Ps. 24  Ps. 25  Ps. 26  Ps. 27  Ps. 28  Ps. 29  Ps. 30  Ps. 31  Ps. 32  Ps. 33 
-      4       5       8       1       2       2       5       3       3       1 
- Ps. 34  Ps. 35  Ps. 36  Ps. 37  Ps. 38  Ps. 39   Ps. 4  Ps. 40  Ps. 41  Ps. 42 
-      6       8       1       3       3       2      15       4      11       1 
- Ps. 44  Ps. 45  Ps. 46  Ps. 48  Ps. 49   Ps. 5  Ps. 50  Ps. 53  Ps. 55  Ps. 58 
-      1       2       1       1       1       2       8       2       2       4 
-  Ps. 6  Ps. 61  Ps. 62  Ps. 63  Ps. 64  Ps. 67  Ps. 68  Ps. 71  Ps. 72  Ps. 73 
-      4       1       3       1       1       5       1       1       9       1 
- Ps. 74  Ps. 76  Ps. 77  Ps. 78  Ps. 79   Ps. 8  Ps. 80  Ps. 81  Ps. 83  Ps. 84 
-      1       1       4       1       2       4       1       1       3       2 
- Ps. 85  Ps. 87  Ps. 88  Ps. 89   Ps. 9  Ps. 90  Ps. 91  Ps. 93  Ps. 94  Ps. 95 
-      4       2       2       3       1       2       1       2       1       1 
- Ps. 99 
-      4 </code></pre>
+  Ps. 4  Ps. 18 Ps. 118  Ps. 41  Ps. 17  Ps. 72 Ps. 115  Ps. 26  Ps. 35 
+     15      12      11      11       9       9       8       8       8 </code></pre>
 </div>
 </div>
 </section>
@@ -650,7 +627,7 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
 <span id="cb7-9"><a href=""></a>    <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="ozad_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="анализ" class="title-slide slide level1 center">
 <h1>Анализ</h1>
@@ -660,7 +637,7 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
 <h2>Тематическое моделирование</h2>
 <ul>
 <li class="fragment"><p>Тематическое моделирование — семейство методов обработки больших коллекций текстовых документов. Эти методы позволяют определить, к каким темам относится каждый документ и какие слова образуют каждую тему.</p></li>
-<li class="fragment"><p>Одним из таких методов является латентное размещение Дирихле (Latent Dirichlet Allocation, LDA). Так называется вероятностная модель, которая позволяет выявить заданное количество тем в корпусе текстов. В основе метода лежит предположение, что каждый документ представляет собой комбинацию ограниченного числа топиков (тем), а каждый топик — это распределение вероятностей для слов.</p></li>
+<li class="fragment"><p>Латентное размещение Дирихле (Latent Dirichlet Allocation, LDA) - вероятностная модель, которая позволяет выявить заданное количество тем в корпусе текстов. В основе метода лежит предположение, что каждый документ представляет собой комбинацию ограниченного числа топиков (тем), а каждый топик — это распределение вероятностей для слов.</p></li>
 <li class="fragment"><p>подробнее см. <a href="https://iq.hse.ru/news/885865882.html">ссылку</a> и <a href="https://sysblok.ru/metascience/tancy-jeros-i-zachatie-o-chem-pisali-platonovskie-issledovanija-za-poslednie-10-let/">пример</a> моделирования журнала “Платоновские исследования”</p></li>
 </ul>
 </section>
@@ -668,19 +645,44 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
 
 
 <img data-src="https://iq.hse.ru/mirror/pubs/share/885917361.png" class="r-stretch quarto-figure-center"><p class="caption">Основные принципы алгоритма латентного размещения Дирихле</p></section>
+<section class="slide level2">
+
+<h3 id="пример-моделирования">Пример моделирования</h3>
+<p>Моделирование корпуса древнегреческой литературы (<a href="https://journals.ub.uni-heidelberg.de/index.php/dco/article/view/73197">статья</a> 2020)</p>
+
+<img data-src="images/LDA.png" class="r-stretch"></section>
 <section id="стилометрия" class="slide level2">
 <h2>Стилометрия</h2>
 <ul>
-<li class="fragment">не только <a href="https://sysblok.ru/knowhow/stilometrija-kak-v-raznoe-vremja-ljudi-iskali-avtorov-tekstov/">определения авторства</a>;</li>
-<li class="fragment">семейство методов (с учителем и без учителя, в том числе ГО)</li>
-<li class="fragment">подробнее см. мое видео от 18.05.2024</li>
+<li class="fragment"><p>семейство методов количественного анализа стиля (обучение с учителем и без учителя, включая ГО);</p></li>
+<li class="fragment"><p>используется не только для <a href="https://sysblok.ru/knowhow/stilometrija-kak-v-raznoe-vremja-ljudi-iskali-avtorov-tekstov/">определения авторства</a>;</p></li>
+<li class="fragment"><p>необходимо учитывать влияние жанра и регистра: стилистическая дистанция не всегда означает разных авторов;</p></li>
+<li class="fragment"><p>плохо работает на небольших отрывках;</p></li>
+<li class="fragment"><p>разные методы приводят к разным результам.</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p>Пример: старофранцузская аллегорическая поэма 13 в. «Роман о Розе» была написана разными авторами в разное время. Из примерно 22 тыс. стихов поэмы первые 4 тыс., как считается, написаны около 1230 г. Гийомом де Лоррисом. Остальные добавлены около 1275 г. Жаном де Мёном.</p>
+<h3 id="rolling-delta">Rolling Delta</h3>
+<p>Метод для определения вклада соавторов, реализованный в библиотеке <a href="https://rdrr.io/cran/stylo/">Stylo</a> в R.</p>
 
-<img data-src="https://computationalstylistics.github.io/assets/img/rolling-svm_100-features_5000-per-slice.png" class="r-stretch quarto-figure-center"><p class="caption">Sections attributed to Guillaume de Lorris are marked red, those attributed to Jean de Meun are green.</p></section>
+<img data-src="https://computationalstylistics.github.io/assets/img/rolling-svm_100-features_5000-per-slice.png" class="r-stretch quarto-figure-center"><p class="caption">Старофранцузская аллегорическая поэма 13 в. «Роман о Розе»: из примерно 22 тыс. стихов поэмы первые 4 тыс., как считается, написаны около 1230 г. Гийомом де Лоррисом (красный). Остальные добавлены около 1275 г. Жаном де Мёном (зеленый).</p></section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment"><p>в 1978 г. Эндрю Мортон применил стилометрический анализ к корпусу посланий ап. Павла, пришел к выводу о подлинности лишь 4 из них;</p></li>
+<li class="fragment"><p>Ж. Савой (<a href="http://members.unine.ch/jacques.savoy/Articles/StPaul.pdf">статья</a> 2019):</p></li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Мы можем … предположить, что один и тот же автор написал 1 и 2 Фесс, и одного и того же автора можно обнаружить за Колос и Ефес. Эти три кластера могли быть написаны как одним автором, так и двумя или тремя разными людьми. Кроме того, рис. 3 не подтверждает гипотезу семи посланий, согласно которой Павел является автором четырех посланий плюс 1-е Фессалоникийцам, Филиппийцам и Филимону.</p>
+</blockquote>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/savoy1.jpg" class="r-stretch"></section>
 <section id="анализ-эмоциональной-тональности" class="slide level2">
 <h2>Анализ эмоциональной тональности</h2>
 <ul>
@@ -692,19 +694,17 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
 
 <p>Некоторые подходы:</p>
 <ul>
-<li class="fragment"><p>подходы, основанные на правилах;</p></li>
 <li class="fragment"><p>подходы, основанные на словарях (<a href="https://github.com/CIRCSE/Latin_Sentiment_Lexicons/tree/master">для латыни</a>; для греческого нет);</p></li>
 <li class="fragment"><p>машинное обучение с учителем;</p></li>
 <li class="fragment"><p>машинное обучение без учителя.</p></li>
-<li class="fragment"><p>Подробнее см.: <a href="https://aclanthology.org/2020.lrec-1.376.pdf">Odi et amo</a></p></li>
-<li class="fragment"><p>Пример анализа настроений в письмах Цицерона (обучающее <a href="https://vk.com/video-211800158_456239295">видео</a>)</p></li>
+<li class="fragment"><p>подробнее см.: <a href="https://aclanthology.org/2020.lrec-1.376.pdf">Odi et amo</a></p></li>
+<li class="fragment"><p>пример анализа настроений в письмах Цицерона (обучающее <a href="https://vk.com/video-211800158_456239295">видео</a>)</p></li>
 </ul>
 </section>
 <section id="визуализация-и-картографирование" class="slide level2">
 <h2>Визуализация и картографирование</h2>
-<p>Несколько интересных решений:</p>
 <ul>
-<li class="fragment">Газетир (географический справочник) для любителей античности: https://pleiades.stoa.org/</li>
+<li class="fragment">Газетир (географический справочник) для любителей античности: <a href="https://pleiades.stoa.org/" class="uri">https://pleiades.stoa.org/</a></li>
 <li class="fragment"><a href="https://recogito.pelagios.org/document/mmmltukvwenhto/map">Recogito</a> — это бесплатный, очень простой, но достаточно удобный онлайн-инструмент, в 2018 получивший приз как лучший DH-tool в Digital Humanities Awards 2018. Он позволяет работать в командах над аннотированием текстов.</li>
 <li class="fragment">В 2014 г. группа DH-сколаров создала <a href="https://ships.lib.virginia.edu/neatline/show/iliad-book-2">карту</a> по мотивам знаменитого «каталога кораблей» из второй песни «Илиады».</li>
 <li class="fragment">карта с виллами Цицерона: <a href="http://antibarbari.ru/2023/03/01/cicero_villas/" class="uri">http://antibarbari.ru/2023/03/01/cicero_villas/</a></li>
@@ -721,9 +721,29 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
 </section>
 <section id="семантический-анализ" class="slide level2">
 <h2>Семантический анализ</h2>
+<ul>
+<li class="fragment">идея семантических векторов основана на <strong>дистрибутивной гипотезе</strong>. Она состоит в том, что смысл слова заключается не в наборе его собственных звуков и букв, а в том, среди каких слов оно чаще всего встречается. То есть смысл слова не хранится где-то внутри него, а <em>распределен</em> между элементами его возможных контекстов (<a href="https://sysblok.ru/knowhow/word2vec-pokazhi-mne-svoj-kontekst-i-ja-skazhu-kto-ty/">подробнее</a>)</li>
+<li class="fragment"><a href="https://ru.wikipedia.org/wiki/Word2vec">Word2vec</a> — общее название для совокупности моделей на основе искусственных нейронных сетей, предназначенных для получения векторных представлений слов на естественном языке. Инструменты для создания векторно-семантических моделей существовали и ранее, но word2vec (<a href="https://arxiv.org/pdf/1301.3781">2013</a>) стал первой популярной реализацией из-за удобства использования, открытого исходного кода и скорости работы.</li>
+<li class="fragment">С многомерными векторами (то есть с векторами, состоящими из большого числа элементов) можно делать всё то же самое, что и с привычными двумерными — складывать их, вычитать, даже строить пропорции. Что самое интересное — при сложении векторов двух слов получается вектор третьего слова, и оно «суммирует» смыслы двух слагаемых в человеческом понимании, иногда неожиданно или даже поэтично.</li>
+</ul>
 </section>
-<section id="где-узнать-больше" class="slide level2">
-<h2>Где узнать больше</h2>
+<section class="slide level2">
+
+
+<img data-src="images/word2vec.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://agricolamz.github.io/2024.06.02_text_analysis/#%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F">Пример</a></p></section>
+<section class="slide level2">
+
+<h3 id="пример-использования">Пример использования</h3>
+<p><a href="https://journals.openedition.org/ijcol/421">Статья</a> 2017 г. о диахронных изменениях в значениях греческих слов</p>
+
+<img data-src="images/panta_rei.png" class="r-stretch"></section></section>
+<section>
+<section id="где-узнать-больше" class="title-slide slide level1 center">
+<h1>Где узнать больше</h1>
+
+</section>
+<section id="полезные-ресурсы" class="slide level2">
+<h2>Полезные ресурсы</h2>
 <ul>
 <li class="fragment"><p>“Системный Блокъ” <a href="https://sysblok.ru/" class="uri">https://sysblok.ru/</a></p></li>
 <li class="fragment"><p>Vox medii aevi <a href="https://t.me/voxmediiaevi" class="uri">https://t.me/voxmediiaevi</a></p></li>
@@ -743,19 +763,19 @@ Ps. 149  Ps. 15  Ps. 16  Ps. 17  Ps. 18 Ps. 187 Ps. 188   Ps. 2  Ps. 21  Ps. 22
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="ozad_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="ozad_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="ozad_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="ozad_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
