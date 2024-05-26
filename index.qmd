@@ -213,7 +213,7 @@ tibble(counts = as.integer(ps_count),
 
 - плохо работает на небольших отрывках;
 
-- разные методы приводят к разным результам.
+- разные методы приводят к разным результам ([лекция О.Алиевой](https://youtu.be/EoyVIDwjsuE?si=SuOr3lsOTGSxssEu))
 
 ---
 
@@ -268,7 +268,7 @@ tibble(counts = as.integer(ps_count),
 ## Сетевой анализ
 
 - просопография (проект "[Социальная сеть Сократа](https://research-bulletin.chs.harvard.edu/2019/02/21/social-network-of-socrates/#_ednref1)")
-- персонажи в драматических произведениях (видео)
+- персонажи в драматических произведениях ([лекция Д. Скоринкина](https://youtu.be/q-kpxHtOLvg?si=_AxwojPLJmGD6-y4))
 - переписка 
 - термины: наиболее частотные существительные из “Исповеди” в виде интерактивного облака ([игрушечный пример](https://locusclassicus.github.io/confessiones/))
 
