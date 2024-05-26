@@ -301,10 +301,8 @@ tibble(counts = as.integer(ps_count),
 - Сайт курса "Количественные методы в гуманитарных науках: критическое введение" <http://criticaldh.ru/>
 - Борис Орехов <https://nevmenandr.github.io/> 
 
+---
 
+## Спасибо за внимание!
 
-  
-  
-
-
-- 
+![](https://upload.wikimedia.org/wikipedia/commons/8/8c/13th-century_painters_-_Bible_moralis%C3%A9e_-_WGA15847.jpg)
